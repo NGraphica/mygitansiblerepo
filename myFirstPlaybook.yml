@@ -6,10 +6,12 @@
       apt:
         name: git
         state: present
+    
     - name: I want to install a tree on ansible node 
       apt:
         name: tree
         state: present
+    
     - name: I want to install a wget on ansible node 
       apt:
         name: wget
