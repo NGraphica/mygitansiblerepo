@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: I want to install a git on ansible node 
+      apt:
+        name: git
+        state: present
+    - name: I want to install a tree on ansible node 
+      apt:
+        name: tree
+        state: present
+    - name: I want to install a wget on ansible node 
+      apt:
+        name: wget
+        state: present
+    

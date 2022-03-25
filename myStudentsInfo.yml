@@ -1,0 +1,23 @@
+---
+myStudentsInfo:
+- name: anil
+  phone: 33123123
+  address:
+    - doorno: 1
+    - streetno: 12342
+    - place: pune
+    - pincode: 411028
+- name: sunil
+  phone: 33123123
+  address:
+    - doorno: 123
+    - streetno: 12234
+    - place: hyd
+    - pincode: 411028
+- name: binil
+  phone: 33123123
+  address:
+    - doorno: 1
+    - streetno: 12
+    - place: mumbai
+    - pincode: 411028
