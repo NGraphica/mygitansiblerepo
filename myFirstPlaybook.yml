@@ -9,6 +9,7 @@
     
     - name: I want to install a tree on ansible node 
       apt:
+        update_cache: yes
         name: tree
         state: present
     
