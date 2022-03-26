@@ -10,6 +10,7 @@
     apt:
       name: git
       stateeeeee: present
+    ignore_errors: yes
   - name: I want to install wget
     apt:
       name: wget
