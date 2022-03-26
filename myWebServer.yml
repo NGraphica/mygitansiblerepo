@@ -4,21 +4,21 @@
   tasks:
     - name: installing web server
       apt:
-        name: {{mywebpackageforubuntu}}
+        name: "{{mywebpackageforubuntu}}"
         state: present
       when: ansible_os_family =="Debian"
     - name: starting apache2 web server
       service:
-        name: {{mywebpackageforubuntu}}
+        name: "{{mywebpackageforubuntu}}"
         state: started
       when: ansible_os_family =="Debian"
     - name: installing web server on only redhat node
       yum:
-        name: {{mywebpackageforradhat}}
+        name: "{{mywebpackageforradhat}}"
         state: present
       when: ansible_os_family =="RedHat"
     - name: I want to start web server on only ansible redhat node
       service:
-        name: {{mywebpackageforradhat}}
+        name: "{{mywebpackageforradhat}}"
         state: started
       when: ansible_os_family =="RedHat"
