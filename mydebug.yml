@@ -8,3 +8,13 @@
   - name: I want to see the result my first task result 
     debug:
       msg: "hostname -f command result is {{myresult}}."
+  - name: I want to install tree
+    apt:
+      name: tree
+      state: present
+    when: myresult.stderr ==""
+  - name: I want to install git
+    apt:
+      name: git
+      state: present
+    when: myresult.stderr !=""
