@@ -1,0 +1,5 @@
+---
+  - name: I want to create a file on hosts/node machines
+    file:
+      path: /home/ubuntu/testcreatefile
+      state: touch
