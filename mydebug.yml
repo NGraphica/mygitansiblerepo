@@ -1,0 +1,10 @@
+---
+- hosts: 172.31.29.206
+  become: yes
+  tasks: 
+  - name: I want to execute linux command directly by playbook
+    command: hostname -f
+    register: myresult
+  - name: I want to see the result my first task result 
+    debug:
+      msg: "hostname -f command result is {{myresult}}."
