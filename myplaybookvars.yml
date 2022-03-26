@@ -1,0 +1,14 @@
+---
+- hosts: 172.31.29.206
+  become: yes
+  vars:
+    myvar1: tree
+    myvar2: wget
+  tasks: 
+  - name: I want to install tree on ubuntu 
+    apt:
+      name: "{{myvar1}}"
+      state: present
+  - name: i want to display value of variable 
+    debug:
+      msg: "{{myvar1}} is value of variable"
