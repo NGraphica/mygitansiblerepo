@@ -1,0 +1,13 @@
+---
+- hosts: 172.31.29.206
+  become: yes
+  tasks: 
+  - name: I want to install tree, git and wget
+    apt:
+      name: "{{ item }}"
+      state: present
+    loop:
+      - tree
+      - git
+      - wget
+   
