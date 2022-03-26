@@ -12,3 +12,13 @@
         name: apache2
         state: started
       when: ansible_os_family =="Debian"
+    - name: installing web server on only redhat node
+      yum:
+        name: httpd
+        state: present
+      when: ansible_os_family =="RedHat"
+    - name: I want to start web server on only ansible redhat node
+      service:
+        name: httpd
+        state: started
+      when: ansible_os_family =="RedHat"
