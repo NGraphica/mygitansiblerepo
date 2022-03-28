@@ -1,0 +1,6 @@
+---
+- name: I want to deploy Java application to ansible nodes i.e. Tomcat server nodes
+  get_url:
+    url: source_url_where_application_is_kept
+    dest: /opt/tomat/webapps/<YOUR_APPLICATION_NAME>.war
+    force_basic_auth: yes
