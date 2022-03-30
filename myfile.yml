@@ -1,5 +1,5 @@
 ---
-- hosts: 172.31.29.206
+- hosts: 172.31.29.80
   become: yes
   tasks: 
   - name: I want to create a file on hosts/node machines
