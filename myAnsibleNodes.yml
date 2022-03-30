@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+  - name: Create an EC2 ansible nodes by executing playbook
+    ec2:
+      key-name: OhioLinuxKey
+      instance-type: t2.micro
+      image: ami-0f287475667ff8020
+      wait: yes
+      group: tomcat_ec2
+      count: 2
+      region: us-east-2
+      vpc_subnet_id: subnet-051fbf397f5db0785
+      assign_public_ip: yes
+      instance_tags:
+        Name: ansible_nodes
