@@ -4,8 +4,8 @@
   tasks:
   - name: Create an EC2 ansible nodes by executing playbook
     ec2:
-      key-name: OhioLinuxKey
-      instance-type: t2.micro
+      key_name: OhioLinuxKey
+      instance_type: t2.micro
       image: ami-0f287475667ff8020
       wait: yes
       group: tomcat_ec2
